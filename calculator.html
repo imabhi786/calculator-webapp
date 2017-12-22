@@ -1,0 +1,33 @@
+<html ng-app="calc">
+    <head>
+        <title>
+            My Calculator
+        </title>
+        <script src="angular.js"></script>
+        <script src="calculator.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        
+    </head>
+    <body>
+        <h1>Calculator Web-App</h1>
+        <div ng-controller="ctrl1 as c1">
+        <input type="text" ng-model="c1.operand1">
+        <span>{{c1.operatorvalue}}</span>
+        <input type="text" ng-model="c1.operand2"></input>
+        <button ng-click="c1.calculate()">=</button>
+        <span>{{c1.result}}</span>
+        <br><br>
+        <h3>Choose operator:</h3><button ng-click="c1.validate1()" ng-model="c1.operatorvalue" >+</button>
+                        <button ng-click="c1.validate2()" ng-model="c1.operatorvalue">-</button>
+                        <button ng-click="c1.validate3()" ng-model="c1.operatorvalue">*</button>
+                        <button ng-click="c1.validate4()" ng-model="c1.operatorvalue">/</button>
+                        <button ng-click="c1.validate5()" ng-model="c1.operatorvalue">%</button>
+                        <button ng-click="c1.validate6()" ng-model="c1.operatorvalue">^</button>
+                        <button ng-click="c1.validate7()" ng-model="c1.operatorvalue">!</button>
+                        <button ng-click="c1.validate8()">AC </button>
+                        
+                        
+                        {{c1.operand1}}      {{c1.operand2}}            
+        </div>
+    </body>
+</html>
